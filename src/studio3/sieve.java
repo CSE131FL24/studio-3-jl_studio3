@@ -8,10 +8,11 @@ public class sieve {
 		for (int i=0; i < limit; i++) {
 			numbers[i] = true;
 		}
+		numbers[0] = false;
 		for (int j=0; j<limit; j++) {
 			for (int i=2; i<limit-2; i++) {
 				for (int n=2; n<limit-2; n++) {
-					if (j == n*i)
+					if (j == n*i-1)
 						numbers[j] = false;
 				}
 			}
